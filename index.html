@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soni Fancy Collection</title>
+    <meta name="description" content="Sonu Jewellers">
+    <meta name="keywords"
+        content="sonifancycollection, soni fancy collection, netlify, soni fancy collection netlify, netlify ecommerce, ecommerce site, ecommerce website, gold, silver, gold silver, jewellery shopping, ornaments, nepal, jhumka, ramdhuni, bhasi, sinuwari, 5metal jewellery, ct gold-plated">
+
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+
+    <script src="https://kit.fontawesome.com/f68539fa9f.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./Screenshot 2023-09-08 at 11.51.23 AM.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Screenshot 2023-09-08 at 11.51.23 AM.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Screenshot 2023-09-08 at 11.51.23 AM.png">
+    <link rel="manifest" href="./Screenshot 2023-09-08 at 11.51.23 AM.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Playfair+Display&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+
+    <meta name="google-site-verification" content="s7bEGFRGDYeGN91DZu6M_ICjki27cs6rklaprIS5KFQ" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5071118882692146"
+        crossorigin="anonymous"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBmniOh7YCwtL8TfImu0r9r10s-GjQ4uGA",
+            authDomain: "sonyfancycollection.firebaseapp.com",
+            projectId: "sonyfancycollection",
+            storageBucket: "sonyfancycollection.appspot.com",
+            messagingSenderId: "790927828196",
+            appId: "1:790927828196:web:addc3b1833787dcea438f1",
+            measurementId: "G-KDXXB6HS60"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <style>
+        .playfair-display {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        #menu-toggle:checked+#menu {
+            display: block;
+        }
+
+        .hover\:grow {
+            transition: all 0.3s;
+            transform: scale(1);
+        }
+
+        .hover\:grow:hover {
+            transform: scale(1.02);
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+        .search-icon {
+            cursor: pointer;
+        }
+
+
+        .search-bar.open {
+            display: block;
+        }
+
+        .related-items {
+            list-style: none;
+            padding: 0;
+            margin-top: 5px;
+        }
+
+        .related-items li {
+            cursor: pointer;
+            padding: 5px;
+            background-color: #f1f1f1;
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+
+        .search-relative {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-95%);
+            top: 50%;
+            width: 300px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        #searchInput {
+            margin-bottom: 10px;
+        }
+
+        #searchButton {
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .related-items li:hover {
+            background-color: #e0e0e0;
+        }
+
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(1em);
+            opacity: 0;
+            animation: slideInText 1s forwards 0.5s;
+        }
+
+        @keyframes slideInText {
+            0% {
+                transform: translateY(1em);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-in {
+            animation: slideIn 1.5s ease forwards;
+        }
+
+        .animate-slide-in-delay {
+            animation: slideIn 1.5s ease forwards;
+            animation-delay: 0s;
+        }
+
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #000;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-gray-600 leading-normal text-base tracking-normal">
+
+    <nav id="header" class="w-full sticky bg-white z-30 top-0 py-1">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
+
+            <label for="menu-toggle" class="cursor-pointer md:hidden block">
+                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20">
+                    <title>menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle"/>
+
+            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1 text-center" id="menu">
+                <nav>
+                    <ul class="md:flex items-center justify-between text-xl lg:text-xl text-gray-700 pt-4 md:pt-0">
+                        <li><a class="inline-block no-underline hover:text-red-400 hover:underline py-2 px-4"
+                                href="index.html">Home</a></li>
+                        <li><a class="inline-block no-underline hover:text-red-400 hover:underline py-2 px-4"
+                                href="index.html">Design</a></li>
+                        <li><a class="inline-block no-underline hover:text-red-400 hover:underline py-2 px-4"
+                                href="index.html">Shop</a></li>
+                        <li><a class="inline-block no-underline hover:text-red-400 hover:underline py-2 px-4"
+                                href="index.html">About</a></li>
+                        <div class="flex justify-center">
+                            <li><a class="inline-block no-underline text-lg hover:text-blue-500 py-2 px-4"
+                                    href="https://www.facebook.com/profile.php?id=61551241792625&mibextid=ZbWKwL"><i
+                                        class="ri-facebook-circle-fill text-2xl"></i></a></li>
+                            <li><a class="inline-block no-underline hover:text-red-500  py-2 px-4" href="#"><i
+                                        class="ri-instagram-line text-2xl"></i></a></li>
+
+                        </div>
+                        <li><a class="inline-block no-underline md:hidden lg:hidden hover:text-black hover:underline py-2 px-4"
+                                href="mailto:gauravsoni7763@gmail.com">gauravsoni7763@gmail.com</a></li>
+
+                        <li><a class="inline-block no-underline md:hidden lg:hidden hover:text-black hover:underline py-2 px-4"
+                                href="tel:9746887763">9746887763</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="order-1 md:order-2 z-30">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+                    href="index.html">
+                    <img src="./Screenshot 2023-09-08 at 11.51.23 AM.png" class="h-7 ml-3 mr-1" alt="">
+                    <p id="animatedText" class="playfair-display lg:text-3xl text-2xl hover:text-red-500 animated-text">
+                        Soni Fancy Collection</p>
+                </a>
+            </div>
+            <!-- <div class="order-2 md:order-3 md:hidden flex items-center" id="nav-content">
+
+                <a class="inline-block no-underline hover:text-black" href="index.html">
+                    <svgƒ class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <circle fill="none" cx="12" cy="7" r="3" />
+                        <path
+                            d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
+                    </svgƒ>
+                </a>
+
+                <a class="pl-3 inline-block no-underline hover:text-black" href="index.html">
+                    <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
+                        <circle cx="10.5" cy="18.5" r="1.5" />
+                        <circle cx="17.5" cy="18.5" r="1.5" />
+                    </svg>
+                </a>
+            </div> -->
+        </div>
+    </nav>
+
+    <div class="w-full h-full">
+        <img src="./home shop.jpeg" class="lg:w-screen lg:h-full" alt="Shop in papa">
+    </div>
+
+    <div class="bg-black  text-white w-full pl-3 py-12 lg:text-center">
+        <h1 class="mb-6 text-4xl playfair-display animate-slide-in">Meet Soni Fancy Collection</h1>
+        <h3 class="mb-7 text-xl playfair-display animate-slide-in-delay">Gold Plated Jewelery</h3>
+        <p class="mb-8 animate-slide-in-delay">Fashion gold covering jewellery, including jewellery with precious and
+            semi-precious stones.</p>
+        <a href="tel:+9779746887763"
+            class=" text-white rounded-lg hover:text-blue-500 bg-blue-500  hover:bg-white animate-slide-in-delay border-4 border-blue-500 py-2 px-3 lg:py-2 lg:px-5"
+            style="transition: all 0.5s ease;">Get
+            in Touch</a>
+    </div>
+
+    <div class="carousel relative container mx-auto" style="max-width:1600px;">
+        <div class="carousel-inner relative overflow-hidden w-full">
+            <!--Slide 1-->
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                checked="checked">
+            <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-left"
+                    style="background-image: url('./board3.jpeg');">
+
+                    <div class="container mx-auto">
+                        <div
+                            class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <!-- <p class="text-black text-2xl my-4"></p> -->
+                            <!-- <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-3"
+                class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-2"
+                class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!--Slide 2-->
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-left"
+                    style="background-image: url('./board2.jpeg');">
+
+                    <div class="container mx-auto">
+                        <div
+                            class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <!-- <p class="text-black text-2xl my-4"></p> -->
+                            <!-- <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-1"
+                class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-3"
+                class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!--Slide 3-->
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
+                    style="background-image: url('./board.jpeg');">
+
+                    <div class="container mx-auto">
+                        <div
+                            class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <!-- <p class="text-black text-2xl my-4"></p> -->
+                            <!-- <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-2"
+                class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-1"
+                class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+
+            <ol class="carousel-indicators">
+                <li class="inline-block mr-3">
+                    <label for="carousel-1"
+                        class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-2"
+                        class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-3"
+                        class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="bg-black text-white  w-full text-center pb-14">
+        <h1 class="pt-9 text-4xl playfair-display ">A Brief History of Soni Fancy Collection</h1>
+        <h3 class="mb-3 text-xl playfair-display py-6">Browse My Work</h3>
+        <p class="pb-10 px-1">About Soni Fancy Collection</h1>
+        <p class="text-center mb-5 text-white ">Soni Fancy Collection is a gold plated jewelry shop located at the
+            bustling
+            heart of Jhumka Bazaar's main chowk. We specialize in gold-plated jewelry that captures the essence of
+            various cultures, offering you a diverse selection to adorn yourself beautifully.</p>
+        <a href="tel:+9779842036618"
+            class=" text-white rounded-lg hover:text-blue-500 bg-blue-500  hover:bg-white animate-slide-in-delay border-4 border-blue-500 py-2 px-3 lg:py-2 lg:px-5"
+            style="transition: all 0.5s ease;">Get
+            in Touch</a>
+
+    </div>
+
+    <section class="bg-white">
+
+        <div class="container mx-auto bg-black">
+
+            <h1 class="text-center mb-8 text-3xl text-white playfair-display bg-gray-500 py-5">About US</h1>
+
+            <h1 class="text-3xl text-center text-white playfair-display mb-5">About Soni Fancy Collection</h1>
+            <p class="text-center mb-5 text-white ">Soni Fancy Collection is a gold plated jewelry shop located at the
+                bustling
+                heart of Jhumka Bazaar's main chowk. We specialize in gold-plated jewelry that captures the essence of
+                various cultures, offering you a diverse selection to adorn yourself beautifully.</p>
+            <br><br>
+            <h1 class="text-3xl mb-5 text-center text-white playfair-display">Our Mission</h1>
+            <p class="text-center text-white">Our mission is simple yet profound – to provide high-quality jewelry that
+                fits into your budget. We aim to create a lasting bond with our customers, offering them an unparalleled
+                shopping experience.
+            </p>
+            <br> <br>
+            <h1 class="text-3xl mb-5 text-center text-white playfair-display">Our Products</h1>
+            <p class="text-center text-white">At Soni Fancy Collection, we take pride in our extensive range of jewelry.
+                From traditional to contemporary, our collection caters to every taste and style, ensuring you find the
+                perfect piece to complement your beauty.</p>
+            <br> <br>
+            <h1 class="text-2xl mb-5 text-center text-white playfair-display">Reasonable Prices and
+                Customer Trust</h1>
+            <p class="text-center text-white">We understand the value of your hard-earned money. That's why we offer our
+                products at prices that are not only competitive but also reasonable. Our commitment to quality means
+                that when you shop with us, you can trust that you're making a wise investment.</p>
+            <br> <br>
+            <h1 class="text-3xl mb-5 text-center text-white playfair-display">We Create Family</h1>
+            <p class="text-center text-white">
+                Beyond selling jewelry, we strive to create a warm, family-like atmosphere with our customers. Your
+                satisfaction is our top priority, and we're here to fulfill your desires when it comes to wearing
+                stunning jewelry.
+            </p>
+
+            <h1 class="text-3xl mb-5 text-center text-white playfair-display pt-10">Our Motto</h1>
+            <p class="text-center text-white pb-6">
+                Our motto is simple yet powerful – "Enhancing Beauty, Building Trust." We believe that by enhancing your
+                beauty with our exquisite jewelry and building trust through exceptional service, we can create lasting
+                connections with our valued customers.
+
+            </p>
+
+        </div>
+
+        <footer class="container mx-auto bg-white py-8">
+            <div class="container flex px-3 py-8 ">
+                <div class="w-full mx-auto flex flex-wrap">
+                    <div class="flex w-full lg:w-1/2 md:w-1/2">
+                        <div class="px-3 md:px-0">
+                            <h3 class="font-bold text-gray-900 text-2xl mb-5">Get in Touch</h3>
+
+                            <p class="mb-5 hover:text-green-500"><span class="font-bold text-black"><i
+                                        class="fa-sharp fa-solid fa-location-dot"></i><span
+                                        class="mr-2"></span>Location: </span> <a
+                                    href="https://goo.gl/maps/AeuPbErtVK3b6vuQ9">Ramdhuni-1,
+                                    Sunsari, Nepal <br> (Click Here)</a></p>
+                            <p class="mb-5"> <span class="font-bold text-black pb-5"><i class="fa-solid fa-phone"></i>
+                                    <span class="mr-1"></span>Phone Number: </span> <a href="tel:9746887763"
+                                    class=" hover:text-green-500">9746887763</a></p>
+                            <p class="mb-5 hover:text-green-500"><span class="font-bold text-black pb-5"><i
+                                        class="fa-solid fa-envelope"></i> <span class="mr-1"></span> Email: </span><a
+                                    href="mailto:gauravsoni7763@gmail.com"
+                                    class=" hover:text-green-500">gauravsoni7763@gmail.com</a></p>
+                            <p><span class="font-bold text-black pb-5"><i class="fa-solid fa-business-time"></i>
+                                    <span class="mr-1"></span>Business Time: </span><span class="text-red-500">Mon -
+                                    Sat: 8:00 AM - 7:00 PM</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex w-full md:w-1/2 lg:w-1/2 md:justify-end lg:justify-end mt-10 md:mt-0 lg:mt-0 md:text-right lg:text-right">
+                        <div class="px-3 md:px-0">
+                            <h3 class="text-left font-bold text-gray-900 mb-5 text-2xl">Social Link</h3>
+
+                            <div class="w-full flex items-center mt-0">
+
+                                <a href="https://www.facebook.com/profile.php?id=61551241792625"
+                                    class="mr-2 hover:text-blue-500 ">
+                                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://wa.me/qr/NZNOP6J5MTAWD1" class=" hover:text-green-500 mr-2">
+                                    <i class="ri-whatsapp-line text-3xl"></i></a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <footer class="container mx-auto bg-white">
+            <div class="container flex px-3 ">
+                <div class="w-full mx-auto flex flex-wrap">
+                    <div class="flex w-full justify-center md:mt-0">
+                        <div class="px-3 md:px-0 pb-12">
+                            <p class="text-lg text-center">&copy; Copyright 2023 Soni Fancy Collection All Rights
+                                Reserved </p>
+                            <h1 class=" text-black text-center pt-6"> Created By: <br> <span
+                                    class="text-black text-9xl justify-center font-extrabold"
+                                    style="background-image: url(https://img.freepik.com/premium-photo/abstract-3d-background-wallpaper-with-glass-squares-generation-ai_201606-2850.jpg); 
+                                    background-size: cover; background-position: center; 
+                                    color: transparent; background-clip: text; -webkit-background-clip: text; font-size:5vmax;">
+                                    <a href="card.html" target="_blank">Gaurav Soni</a></span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <button onclick="goToTop()" id="goToTopBtn"
+            class="fixed bottom-4 right-4 z-40 bg-blue-500 animate-bounce text-white px-4 py-2.5 rounded-full shadow hidden">
+            <i class="fa-solid fa-regular fa-arrow-up text-xl"></i>
+        </button>
+        <script src="main.js"></script>
+
+</body>
+
+</html>
